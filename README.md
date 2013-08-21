@@ -20,7 +20,7 @@ Or install it yourself as:
 
 Add a ruby file (perhaps named `jekyll-stitch-plus.rb`) to your Jekyll plugins directory add add `require 'jekyll-stitch-plus'` to the top.
 
-Next add `{% javascript_tag %}` to a template to render `<script src='/javascripts/all.js'></script>`
+Next add `{% stitch_js_tag %}` to a template to render `<script src='/javascripts/all.js'></script>`
 
 ## Configuration
 
