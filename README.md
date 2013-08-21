@@ -55,6 +55,8 @@ either set `env: production` in your Jekyll config, or set your shell JEKYLL_ENV
 
 Setting `uglify: true` (or false) in your Jekyll stitch config will always override any ENV setting. 
 
+If you're confused about paths and dependencies [read this](https://github.com/imathis/stitch-plus#regarding-dependencies).
+
 ## Contributing
 
 1. Fork it
