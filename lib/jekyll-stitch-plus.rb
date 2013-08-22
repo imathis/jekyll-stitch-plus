@@ -8,7 +8,7 @@ module Jekyll
 
       begin
         require 'uglifier'
-        @uglifier = Uglifier.new(config['stitch']['uglify_options'])
+        @uglifier = Uglifier.new config['stitch']['uglify_options'] || {}
         if (ENV['JEKYLL_ENV'] || config['env']).downcase == 'production'
           config['stitch']['uglify'] ||= true
         end
