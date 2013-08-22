@@ -24,15 +24,15 @@ Next add `{% stitch_js_tag %}` to a template to render `<script src='/javascript
 
 ## Configuration
 
-| Config           | Description                                                                | Default     |
-|:-----------------|:---------------------------------------------------------------------------|:------------|
-| `dependencies`   | Array of files/directories to be added first as global javascripts         | nil         |
-| `paths`          | Array of directories where javascripts will be wrapped as CommonJS modules | nil         |
-| `output`         | A path to write the compiled javascript                                    | 'all.js'    |
-| `fingerprint`    | Add a fingerprint to the file name for super cache busting power           | false       |
-| `cleanup`        | Automatically remove previously compiled files                             | true        |
-| `uglify`         | Smash javascript using the Uglifier gem                                    | false       |
-| `uglify_options` | Options for the Uglifier gem. See [the docs](https://github.com/lautis/uglifier#usage) for details. | {}       |
+| Config           | Description                                                                                          | Default     |
+|:-----------------|:-----------------------------------------------------------------------------------------------------|:------------|
+| `dependencies`   | Array of files/directories to be added first as global javascripts (relative to Jekyll's pwd)        | nil         |
+| `paths`          | Array of directories where javascripts will be wrapped as CommonJS modules (reltive to Jekyll's pwd) | nil         |
+| `output`         | A path to write the compiled javascript, (relative to Jekyll's source directory)                     | 'all.js'    |
+| `fingerprint`    | Add a fingerprint to the file name for super cache busting power                                     | false       |
+| `cleanup`        | Automatically remove previously compiled files                                                       | true        |
+| `uglify`         | Smash javascript using the Uglifier gem                                                              | false       |
+| `uglify_options` | Options for the Uglifier gem. See [the docs](https://github.com/lautis/uglifier#usage) for details.  | {}          |
 
 To configure this plugin add Jekyll's YAML configuration file. Here's an example.
 
@@ -49,6 +49,10 @@ stitch:
   output: 'js/site.js'
   fingerprint: true
 ```
+
+Note: javascripts don't have to be kept in the source directory to be compiled by stitch-plus. The configuration paths for `dependencies` and `paths` should point to your javascripts relative to Jekyll's current working directory and they can be anywhere on your file system. Keep in mind though that the ouput path is relative to Jekyll's source directory since the file must be written to the source directory to be managed by Jekyll.
+
+### To Uglify Output
 
 To uglify javascript output you must first install [the uglifier gem](https://github.com/lautis/uglifier) then set your Jekyll environment to production. There are two ways to do this;
 either set `env: production` in your Jekyll config, or set your shell JEKYLL_ENV to 'production' (case does not matter).

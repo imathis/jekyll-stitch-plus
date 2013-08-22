@@ -16,9 +16,7 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files`.split($/)
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "jekyll", "~> 1.0.0"
-  spec.add_runtime_dependency "jekyll-page-hooks", "~> 1.0.2"
-  spec.add_runtime_dependency "stitch-plus", "~> 1.0.8"
+  spec.add_runtime_dependency "stitch-plus", "~> 1.0.9"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
