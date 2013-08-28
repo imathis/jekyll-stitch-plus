@@ -1,7 +1,9 @@
 # Jekyll Stitch Plus
 
 Easily package javascripts into a single file, with support for fingerprinting, uglification and CommonJS wrapping for easy modularization. This plugin is powered by
-[Stitch Plus](https://github.com/imathis/stitch-plus) which is a fancy interface on top of [Stitch-rb](https://github.com/maccman/stitch-rb).
+[stitch-plus](https://github.com/imathis/stitch-plus) which is a fancy interface on top of [Stitch-rb](https://github.com/maccman/stitch-rb).
+
+If you want to fully understand what this is doing, you should probably read the [stitch-plus docs](https://github.com/imathis/stitch-plus), these docs are mostly focused on how to get stitch-plus to work with Jekyll.
 
 ### Install the Gem
 Add this line to your application's Gemfile:
@@ -15,6 +17,8 @@ And then execute:
 Or install it yourself as:
 
     $ gem install jekyll-stitch-plus
+
+If you want to use Coffeescript, be sure you install the `coffee-script` gem, and if you want to uglify your javascripts, you'll need the `uglifier` gem.
 
 ### Install the plugin
 
