@@ -1,17 +1,16 @@
 name: Your New Jekyll Site
 markdown: redcarpet
 pygments: true
-source: source
 plugins: plugins
 
 env: 'production'
 
 stitch:
   dependencies: 
-    - 'source/js/lib/jquery.js'
-    - 'source/js/lib/underscore.js'
-    - 'source/js/lib'        # globs the js/lib dir
-  paths: 'source/js/modules' # globs the js/modules dir
+    - 'assets/js/lib/jquery.js'
+    - 'assets/js/lib/underscore.js'
+    - 'assets/js/lib'        # globs the js/lib dir
+  paths: 'assets/js/modules' # globs the js/modules dir
   output: 'js/site.js'
   fingerprint: true
 

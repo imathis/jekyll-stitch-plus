@@ -9,7 +9,8 @@ module Jekyll
 
       stitch = ::StitchPlus.new(config['stitch'])
       options = stitch.options
-      dir = File.dirname(options[:output])
+      output_file = output_path(site.source, options[:output])
+      dir = File.dirname(output_file)
 
       # If Guard Stitch Plus is running, let it handle the writes
       if ENV['GUARD_STITCH_PLUS']
@@ -28,7 +29,7 @@ module Jekyll
         rescue LoadError
         end
 
-        path = File.join site.source, options[:output]
+        path = File.join site.source, output_file
         stitch.set_options({output: path, uglify: config['stitch']['uglify']})
 
         puts '' # Because Jekyll doesn't give a newline for other output
@@ -62,6 +63,11 @@ module Jekyll
           end
         end
       end
+    end
+
+    def output_path(dir, file)
+      source_dir = dir.split('/').last
+      file = file.sub /^#{source_dir}\//,''
     end
 
 
