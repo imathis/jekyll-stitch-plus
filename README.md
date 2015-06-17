@@ -1,6 +1,6 @@
 # Jekyll Stitch Plus
 
-[![Gem Version](https://badge.fury.io/rb/jekyll-stitch-plus.png)](http://badge.fury.io/rb/jekyll-stitch-plus)
+[![Gem Version](https://badge.fury.io/rb/jekyll-stitch-plus.svg)](http://badge.fury.io/rb/jekyll-stitch-plus)
 
 Easily package javascripts into a single file, with support for fingerprinting, uglification and CommonJS wrapping for easy modularization. This plugin is powered by
 [stitch-plus](https://github.com/imathis/stitch-plus) which is a fancy interface on top of [Stitch-rb](https://github.com/maccman/stitch-rb).
